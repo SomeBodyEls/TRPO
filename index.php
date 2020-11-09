@@ -1,29 +1,45 @@
 <?php
+Class A {
+    public function line ($a,$b){
 
-Class A
-{
-}
+        if($a = 0) {
+            return null;
+        }
 
-Class B extends A
-{
-    protected $a;
-    protected $b;
-    protected $c;
-    protected $d;
-
-    public function _construct($a,$b,$c,$d)
-    {
-        $this->a = $a;
-        $this->b = $b;
-        $this->c = $c;
-        $this->d = $d;
+        return $this->x=(-$b)/$a;
     }
-
-
+    
+    protected $x;
 }
 
-$a1 = new A();
-$a2 = new A();
-$a3 = new A();
-$a4 = new A();
-$b1 = new B($a1,$a2,$a3,$a4);
+Class B extends A {
+    protected function discrim ($ab,$bb,$cb){
+
+        $DIS=$bb**2-4*$ab*$cb;
+        return $DIS;
+    }
+    public function quatro ($a,$b,$c,$DIS){
+
+        if ($a == 0){
+            return $this->line($b,$c);
+        }
+
+        if ($DIS > 0){
+            return $this->x=array(
+                ((-$b)+$DIS)/2*$a,
+                ((-$b)-$DIS)/2*$a
+            );
+        }
+
+        if ($DIS == 0){
+            return $this->x=(-$b)/2*$a;
+        }
+
+        return $this->x=null;
+    }
+}
+$q = new A ();
+$w = new B ();
+$q->line(2,2);
+$w->quatro(5,-14,17);
+?>
