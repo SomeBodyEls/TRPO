@@ -4,10 +4,10 @@ Class Line{
     public function line ($a,$b){
 
         if(0 === $a) {
-            return null;
+            throw new PopenkoException("Equation doesn`t exist");
         }
-
-        return $this->x=-($b/$a);
+        \poepnko\MyLog::log("This is line equation");
+        return $this->x=-$b/$a;
     }
 
     protected $x;

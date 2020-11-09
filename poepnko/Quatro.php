@@ -18,10 +18,10 @@ Class Quatro extends Line implements EquationInterface
 
         $disc = $this->discrim($a, $b, $c);
 
-        if (0 === $a) {
+        if (0 == $a) {
             return [$this->line($b, $c)];
         }
-
+        \poepnko\MyLog::log("This is quatro equation");
         if ($disc > 0) {
             return $this->x = array(
                 ((-$b) + $disc) / 2 * $a,
@@ -30,10 +30,10 @@ Class Quatro extends Line implements EquationInterface
         }
 
         if ($disc === 0) {
-            return $this->x = (-$b) / 2 * $a;
+            return [$this->x =(-$b) / 2 * $a];
         }
 
-        return $this->x = null;
+        throw new PopenkoException("No roots");
     }
 
 }
