@@ -16,9 +16,9 @@ include "poepnko\PopenkoException.php";
 ini_set('error_reporting', E_ALL);
 
 
-
 try {
-
+    $version = file_get_context("version");
+    MyLog::log("Версия программы " . $version);
     $values = array();
 
     for ($i = 1; $i < 4; $i++) {
