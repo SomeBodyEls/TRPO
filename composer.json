@@ -1,0 +1,25 @@
+{
+  "name": "schauindieleere/trpo",
+  "type": "project",
+  "authors": [
+    {
+      "name": "schauindieleere",
+      "email": "xx.maxion@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/rok9ru/trpo-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/schauindieleere/summon_trpo.git"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "rok9ru/trpo-core":"^2.0",
+    "schauindieleere/summon_trpo":"^5.1"
+  }
+}

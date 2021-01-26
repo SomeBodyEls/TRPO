@@ -1,4 +1,5 @@
 core/
 Log/
-vesion
+version
 .idea/
+/vendor/
