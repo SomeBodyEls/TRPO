@@ -4,20 +4,13 @@ use poepnko\MyLog;
 use poepnko\PopenkoException;
 use poepnko\Quatro;
 
-include "core\EquationInterface.php";
-include "core\LogAbstract.php";
-include "core\LogInterface.php";
-include "poepnko\MyLog.php";
-include "poepnko\Line.php";
-include "poepnko\Quatro.php";
-include "poepnko\PopenkoException.php";
-
+require_once __DIR__ . '/vendor/autoload.php';
 
 ini_set('error_reporting', E_ALL);
 
 
 try {
-    $version = file_get_context("version");
+    $version = file_get_contents("version");
     MyLog::log("Версия программы " . $version);
     $values = array();
 
